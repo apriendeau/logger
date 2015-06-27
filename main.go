@@ -7,7 +7,7 @@ import (
 )
 
 type Wrap struct {
-	M *http.Handler
+	M http.Handler
 }
 
 type loggedResponse struct {
