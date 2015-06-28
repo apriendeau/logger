@@ -34,5 +34,5 @@ func (h *Wrap) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		"method":       r.Method,
 		"url":          r.URL.String(),
 		"responseTime": t2.Sub(t1),
-	}).Info(msg)
+	}).Info(string(msg))
 }
