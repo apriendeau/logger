@@ -28,7 +28,7 @@ func (h *Wrap) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	h.M.ServeHTTP(lw, r)
 
 	t2 := time.Now()
-	msg := fmt.Sprintf("[%d] [%s] %q %v\n", lw.status, r.Method, r.URL.String(), t2.Sub(t1))
+	msg := fmt.Sprintf("[%d] [%s] %q %v", lw.status, r.Method, r.URL.String(), t2.Sub(t1))
 	log.WithFields(log.Fields{
 		"status":       lw.status,
 		"method":       r.Method,
